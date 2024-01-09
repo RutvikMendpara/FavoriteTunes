@@ -11,7 +11,7 @@
 2. Clone the repository:
 
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/RutvikMendpara/FavoriteTunes
    cd FavoriteTunes
    ```
 
@@ -36,3 +36,5 @@
 6. Access the admin panel at `http://127.0.0.1:8000/admin/` and add your favorite tunes and artists.
 
 7. View your song list at `http://127.0.0.1:8000/`.
+
+8. For adding Artists or song at `http://127.0.0.1:8000/songs/add`
