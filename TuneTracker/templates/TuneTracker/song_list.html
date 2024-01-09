@@ -1,0 +1,32 @@
+{% extends 'TuneTracker/base.html' %} {% block content %}
+
+<div class="container">
+  <div class="column">
+    <h2>Song List</h2>
+    {% for artist in artists_with_song_count %}
+    <p>{{ artist.name }} - {{ artist.song_count }} songs</p>
+    {% endfor %}
+  </div>
+
+  <div class="column">
+    <h3>All Songs</h3>
+    <ul class="song_list_all_songs">
+      {% for song in songs %}
+      <li>
+        <a href="{% url 'song_detail' song.id %}">{{ song.title }}</a> -
+        <p>{{ song.artist.name }}</p>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div class="column">
+    <h3>All Artists</h3>
+    <ul>
+      {% for artist in all_artists %}
+      <li>{{ artist.name }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+{% endblock %}

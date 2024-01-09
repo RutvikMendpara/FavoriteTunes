@@ -1,0 +1,17 @@
+{% extends 'TuneTracker/base.html' %} {% block content %}
+<div>
+  <form method="post" action="{% url 'add_song' %}">
+    {% csrf_token %}
+    <input type="hidden" name="form_type" value="song" />
+    {{ song_form.as_p }}
+    <button type="submit">Add Song</button>
+  </form>
+
+  <form method="post" action="{% url 'add_song' %}">
+    {% csrf_token %}
+    <input type="hidden" name="form_type" value="artist" />
+    {{ artist_form.as_p }}
+    <button type="submit">Add Artist</button>
+  </form>
+</div>
+{% endblock %}

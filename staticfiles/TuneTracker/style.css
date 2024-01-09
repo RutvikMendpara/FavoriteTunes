@@ -1,0 +1,20 @@
+body {
+  background-color: #333;
+  font-family: "Arial", sans-serif;
+}
+
+h2 {
+  color: #e1bebe;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #333;
+}
+
+.column {
+  flex: 1;
+  padding: 10px;
+  box-sizing: border-box;
+  min-width: 300px;
+}
